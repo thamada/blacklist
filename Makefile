@@ -1,3 +1,4 @@
+# Copyright (c) 2017 by Tsuyoshi Hamada. All rights reserved
 
 target = iptables.sh
 

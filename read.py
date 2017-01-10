@@ -1,5 +1,8 @@
 #!/usr/bin/env python2.7
 #Time-stamp: <2017-01-07 07:55:39 hamada>
+#
+# Copyright (c) 2017 by Tsuyoshi Hamada. All rights reserved.
+#
 import time
 import glob
 import Queue
