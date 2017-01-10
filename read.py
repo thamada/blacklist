@@ -70,8 +70,8 @@ def gen_blacklist(ifname, logger):
 if __name__ == "__main__":
     logger = gen_logger()    
     blacklist = gen_blacklist(sys.argv[1], logger)
-    for line in blacklist:
-        print "["+line+"]"
+    for i, e in enumerate(blacklist):
+        print "% 3d: [%s]" % (i, e)
         
     
 #    quotes.sort()
