@@ -61,8 +61,7 @@ def gen_blacklist(ifname, logger):
         if l is not '':
             blacklist2.append(l)
 
-    for line in blacklist2:
-        print line
+    return blacklist2
 
 
 '''
@@ -71,6 +70,9 @@ def gen_blacklist(ifname, logger):
 if __name__ == "__main__":
     logger = gen_logger()    
     blacklist = gen_blacklist(sys.argv[1], logger)
+    for line in blacklist:
+        print "["+line+"]"
+        
     
 #    quotes.sort()
 
