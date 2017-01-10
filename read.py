@@ -52,14 +52,15 @@ def gen_blacklist(ifname, logger):
     
     blacklist  = [line.strip() for line in open(ifname)]
 
-    pattern = r"#"
-
     blacklist2 = [ ]
     for line in blacklist:
+        pattern = r"#"
         matchOB = re.split(pattern, line)
-        l = matchOB[0]
-        if l is not '':
-            blacklist2.append(l)
+        l0 = matchOB[0]
+        l1 = re.sub(r' +', '', l0)
+
+        if l1 is not '':
+            blacklist2.append(l1)
 
     return blacklist2
 
